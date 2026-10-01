@@ -13,7 +13,7 @@ I design and build intelligent, scalable applications by combining **Artificial 
 [![Email](https://img.shields.io/badge/Email-khairatmouhcine125-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:khairatmouhcine125@gmail.com)
 
 <div align="center"><h3><code>mouhcine@github ~ $ whoami</code></h3>
-<table><tr><td valign="top"><img src="./assets/mouhcine-ascii.svg" width="370"/></td><td valign="top"><img src="./assets/info-card.svg" width="490"/></td></tr></table></div>
+<table><tr><td valign="top"><img src="./assets/mouhcine-ascii.svg"/></td><td valign="top"><img src="./assets/info-card.svg" width="490"/></td></tr></table></div>
 
 # 💻 Tech Stack
 
