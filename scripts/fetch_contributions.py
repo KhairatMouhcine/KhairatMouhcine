@@ -1,7 +1,9 @@
 import json
+from pathlib import Path
+
 import requests
 from bs4 import BeautifulSoup
-from pathlib import Path
+
 
 USERNAME = "KhairatMouhcine"
 
@@ -10,7 +12,7 @@ url = f"https://github.com/users/{USERNAME}/contributions"
 response = requests.get(
     url,
     headers={"User-Agent": "Mozilla/5.0"},
-    timeout=30
+    timeout=30,
 )
 
 response.raise_for_status()
@@ -22,35 +24,37 @@ days = []
 for element in soup.select(
     "td.ContributionCalendar-day, rect.ContributionCalendar-day"
 ):
-    date = element.get("data-date")
+    contribution_date = element.get("data-date")
 
-    if not date:
+    if not contribution_date:
         continue
 
-    count = int(element.get("data-count") or 0)
-    level = int(element.get("data-level") or 0)
+    days.append(
+        {
+            "date": contribution_date,
+            "count": int(element.get("data-count") or 0),
+            "level": int(element.get("data-level") or 0),
+        }
+    )
 
-    days.append({
-        "date": date,
-        "count": count,
-        "level": level
-    })
 
-
-# ✅ Create data/ automatically if it doesn't exist
+# IMPORTANT : créer le dossier data avant d'écrire le fichier
 data_dir = Path("data")
 data_dir.mkdir(parents=True, exist_ok=True)
 
+output_file = data_dir / "contributions.json"
 
-output = {
-    "username": USERNAME,
-    "days": days
-}
-
-Path("data/contributions.json").write_text(
-    json.dumps(output, indent=2),
-    encoding="utf-8"
+output_file.write_text(
+    json.dumps(
+        {
+            "username": USERNAME,
+            "days": days,
+        },
+        indent=2,
+    ),
+    encoding="utf-8",
 )
 
-print(f"✅ Fetched {len(days)} contribution days")
-print(f"🔥 Total contributions: {sum(day['count'] for day in days)}")
+print(f"✅ {len(days)} days fetched")
+print(f"🔥 {sum(day['count'] for day in days)} contributions")
+print(f"💾 Saved to {output_file}")
