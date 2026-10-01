@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="360">
+<style>.t{font:15px monospace;fill:#c9d1d9}.k{fill:#58a6ff}.g{fill:#3fb950}.l{opacity:0;animation:i .35s ease forwards}@keyframes i{to{opacity:1}}</style>
+<rect width="100%" height="100%" rx="14" fill="#0d1117" stroke="#30363d"/>
+<text x="24" y="36" class="t g">mouhcine@github</text><text x="24" y="58" class="t">-----------------------------</text>
+<g class="t">
+<text class="l" style="animation-delay:.2s" x="24" y="88"><tspan class="k">Role</tspan><tspan x="130">AI &amp; Full-Stack Engineer</tspan></text>
+<text class="l" style="animation-delay:.4s" x="24" y="116"><tspan class="k">Location</tspan><tspan x="130">Casablanca, Morocco</tspan></text>
+<text class="l" style="animation-delay:.6s" x="24" y="144"><tspan class="k">AI</tspan><tspan x="130">ML · DL · RAG · AI Agents</tspan></text>
+<text class="l" style="animation-delay:.8s" x="24" y="172"><tspan class="k">Backend</tspan><tspan x="130">.NET · Python · Java</tspan></text>
+<text class="l" style="animation-delay:1s" x="24" y="200"><tspan class="k">Frontend</tspan><tspan x="130">React · Angular · TypeScript</tspan></text>
+<text class="l" style="animation-delay:1.2s" x="24" y="228"><tspan class="k">Mobile</tspan><tspan x="130">Flutter · Dart</tspan></text>
+<text class="l" style="animation-delay:1.4s" x="24" y="256"><tspan class="k">Data</tspan><tspan x="130">SQL Server · MySQL · MongoDB</tspan></text>
+<text class="l" style="animation-delay:1.6s" x="24" y="284"><tspan class="k">ERP</tspan><tspan x="130">Dynamics 365 Business Central</tspan></text>
+<text class="l g" style="animation-delay:1.8s" x="24" y="326">● Building intelligent systems</text></g></svg>
